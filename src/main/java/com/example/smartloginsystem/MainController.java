@@ -29,4 +29,17 @@ public class MainController {
         stage.setScene(scene);
         stage.show();
     }
+
+   // @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Scene scene = new Scene(root, 1000, 600);
+        stage.setTitle("Smart Login System");
+        stage.setScene(scene);
+        stage.setMinWidth(800);
+        stage.setMinHeight(500);
+        stage.show();
+    }
+
+
 }
