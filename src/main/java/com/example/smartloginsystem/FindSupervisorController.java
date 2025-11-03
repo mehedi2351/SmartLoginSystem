@@ -1,4 +1,4 @@
-package com.example.smartthesis;
+package com.example.smartloginsystem;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,5 +21,16 @@ public class FindSupervisorController {
         stage.setTitle("Dashboard");
         stage.show();
     }
+    public void projectsubmitted(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("project_submitted.fxml"));
+        Parent root = loader.load();
 
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Dashboard");
+        stage.show();
+    }
 }
+
+
+

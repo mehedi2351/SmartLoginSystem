@@ -100,6 +100,17 @@ public class DashboardController {
         stage.setTitle("Find Supervisor");
         stage.show();
     }
+    public void opensubmitted(ActionEvent actionEvent) throws  IOException
+    {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("project_submitted.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Find Supervisor");
+        stage.show();
+    }
+
 
 
 }
