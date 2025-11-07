@@ -36,8 +36,8 @@ public class DashboardController {
     @FXML
     public void initialize() {
         // header info
-        userNameLabel.setText("Hi Mehedi!");
-        userRoleLabel.setText("Bsc in CSE, 2025 Batch");
+        userNameLabel.setText("Dr. Md. Arshad Ali!");
+        userRoleLabel.setText("Professor");
 
         // load avatar (resource)
         try (InputStream in = getClass().getResourceAsStream("/com/example/smartloginsystem/img.png")) {
@@ -103,6 +103,16 @@ public class DashboardController {
     public void opensubmitted(ActionEvent actionEvent) throws  IOException
     {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("project_submitted.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Find Supervisor");
+        stage.show();
+    }
+    public void openproject(ActionEvent actionEvent) throws  IOException
+    {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("View_Post.fxml"));
         Parent root = loader.load();
 
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
