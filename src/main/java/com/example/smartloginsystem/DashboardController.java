@@ -36,8 +36,8 @@ public class DashboardController {
     @FXML
     public void initialize() {
         // header info
-        userNameLabel.setText("Dr. Md. Arshad Ali!");
-        userRoleLabel.setText("Professor");
+        userNameLabel.setText("Md mehedi");
+        userRoleLabel.setText("Cse 2023");
 
         // load avatar (resource)
         try (InputStream in = getClass().getResourceAsStream("/com/example/smartloginsystem/img.png")) {
